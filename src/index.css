@@ -22,12 +22,12 @@ body {
   max-width: 900px;
   padding: 20px 30px;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 0px 10px 10px rgba(0, 0, 0, 0.2);
+  margin: auto 10%;
 }
 
 #quote-text {
-  background-color: yellow;
   font-size: 2.75rem;
 }
 
@@ -36,7 +36,6 @@ body {
 }
 
 #quote-author {
-  background-color: hotpink;
   margin-top: 15px;
   font-size: 2rem;
   font-weight: 400;
@@ -70,4 +69,34 @@ button:hover {
 button:active {
   transform: translate(0, 0.3rem);
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+.loader {
+  border: 16px solid #333;
+  border-top: 16px solid rebeccapurple;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Query: Tablet or Smaller */
+@media screen and (max-width: 1000px) {
+  .quote-container {
+    margin: auto 10px;
+  }
+
+  .quote-text {
+    font-size: 2.5rem;
+  }
 }
